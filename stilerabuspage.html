@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+</head>
+
+<body class="font-sans leading-normal tracking-normal">
+
+    
+
+    <!-- Hero Section with Gradient Background -->
+    <section class="bg-gradient-to-l from-teal-900 via-teal-800 to-teal-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-4 ">About Us</h2>
+                <p class="text-lg ">We are passionate about delivering innovative solutions that help our clients succeed. Our team is driven by a shared commitment to excellence and collaboration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div x-data="{ current: 0, images: ['https://www.patriotsoftware.com/wp-content/uploads/2023/06/charitable-donations-featured.webp', 'https://i0.wp.com/fourdirectionsmaine.org/wp-content/uploads/2024/10/fddc-hands-2.png?resize=1290%2C858&ssl=1', 'https://brownliving.in/cdn/shop/articles/food-donation-services-988981.jpg?v=1703200384'] }" class="relative">
+
+                <!-- Carousel Images -->
+                <div class="overflow-hidden rounded-lg shadow-xl">
+                    <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${current * 100}%)`">
+                        <template x-for="(image, index) in images" :key="index">
+                            <div class="w-full">
+                                <img :src="image" alt="carousel image" class="w-full object-cover h-72 md:h-96">
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="absolute top-1/2 left-0 transform -translate-y-1/2 p-4">
+                    
+                        
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team / Image Card Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <h3 class="text-3xl font-semibold text-center text-gray-800 mb-12">Our Team</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://restlessdevelopment.org/wp-content/uploads/2021/02/Sandeep-Sharma-1000x1024.jpg" alt="Team Member 1"
+                        class="w-full h-70 object-cover object-center">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800">John Doe</h4>
+                        <p class="text-gray-600 mt-2">CEO & Founder</p>
+                        <p class="mt-4 text-gray-600">John is the visionary behind our company, leading with integrity and a focus on innovation. He inspires the team to push boundaries and deliver the best.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://rukhmabai.com/wp-content/uploads/2022/11/4-1000x1024.webp" alt="Team Member 3"
+                        class="w-full h-70 object-cover object-center">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800">Mark Wilson</h4>
+                        <p class="text-gray-600 mt-2">Head of Development</p>
+                        <p class="mt-4 text-gray-600">Mark is responsible for leading our talented development team, ensuring that we build innovative and scalable solutions.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.ultrawellnesscenter.com/wp-content/uploads/2024/09/image-1-4-1000x1024.jpg" alt="Team Member 2"
+                        class="w-full h-70 object-cover object-center">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800">Shouvik Banarjee</h4>
+                        <p class="text-gray-600 mt-2">Chief Operating Officer</p>
+                        <p class="mt-4 text-gray-600">Jane ensures the company operates efficiently, focusing on optimizing processes and delivering excellence at every level.</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-yellow-400 via-purple-500 to-violet-600 text-white py-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2024 YourCompany. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
